@@ -1,4 +1,5 @@
 import 'package:city_store/log-in.dart';
+import 'package:city_store/shops.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'cart.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:Splah(),
+      home:MyHomePage(),
     );
   }
 }
@@ -39,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
     _pages = [
       Home(),
       Cart(),
-      Profile()
+      Shops()
     ];
     super.initState();
   }
@@ -51,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
           tabs: [
             TabData(iconData:Icons.home,title: 'Home'),
             TabData(iconData:Icons.favorite,title: 'Favorite'),
-            TabData(iconData:Icons.person_pin,title: 'Profile'),
+            TabData(iconData:Icons.shop,title: 'Shops'),
           ],
          initialSelection: 0,
          circleColor: Colors.black,
